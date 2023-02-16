@@ -9,3 +9,22 @@
 </header>
 
 <%- include('./partials/foot') %>
+
+
+<main>
+
+<section class="card-container">
+  <!-- Hier komen de members -->
+  <% squad.members.forEach(member => { %>
+    <div class="member-card">
+      <% if (member.avatar) { %>
+      <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+      <% }else{ %>
+      <img src="/placeholder.jpg" alt="Placeholder avatar" />
+      <% } %>
+      <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
+    </div>
+  <% }) %>
+</section>
+
+</main>
