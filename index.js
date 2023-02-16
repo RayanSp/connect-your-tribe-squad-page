@@ -6,6 +6,12 @@ const data = await fetch(url).then((response) => response.json())
 
 console.log(data)
 
+// Haal alle squad members op
+// Voor elk squad member:
+//   - Kijk of er huisdieren zijn
+//   - Zo niet, voeg een 'fake' huisdier toe
+
+
 // Maak een nieuwe express app aan
 const app = express()
 
