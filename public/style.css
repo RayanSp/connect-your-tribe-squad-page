@@ -51,6 +51,13 @@ main {
     background-color: white;
 }
 
+.card-header {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+
 h2 {
     font-weight: lighter;
 }
@@ -58,7 +65,7 @@ h2 {
 .card-container {
     justify-content: center;
     padding: 2rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-left: 3rem;
     margin-right: 3rem;
     display: flex;
@@ -71,6 +78,7 @@ h2 {
 
 .member-card {
     background-color: var(--clr-secondary);
+    margin-top: 3rem;
     padding-bottom: 10rem;
     height: 10em;
     width: 15em;
