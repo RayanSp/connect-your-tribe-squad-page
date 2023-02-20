@@ -2,16 +2,16 @@
 
 <header class="header-huisdieren">
   <nav class="navbar-items">
-    <a href="#" class="nav-content">Logo</a>
-    <a href="#" class="nav-content">Huisdieren</a>
-    <a href="#" class="nav-content">Studenten</a>
+    <a href="#" class="nav-content">SQUAD A</a>
+    <a href="#" class="nav-content">SQUAD B</a>
+    <a href="#" class="nav-content">SQUAD C</a>
   </nav>
 </header>
 
-<%- include('./partials/foot') %>
-
 
 <main>
+
+<img src="/squad-b.png" class="squad-b-img">
 
 <section class="card-container">
   <!-- Hier komen de members -->
@@ -20,11 +20,15 @@
       <% if (member.avatar) { %>
       <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
       <% }else{ %>
-      <img src="/placeholder.jpg" alt="Placeholder avatar" />
+      <img src="/placeholder.jpeg" alt="Placeholder avatar" />
       <% } %>
       <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
-    </div>
+      <button type="button" class="info-button">Meer info!</button> 
+    </div> 
   <% }) %>
+  
 </section>
 
 </main>
+
+<%- include('./partials/foot') %>
