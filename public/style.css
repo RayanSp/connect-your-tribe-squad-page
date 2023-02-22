@@ -62,6 +62,61 @@ h2 {
     font-weight: lighter;
 }
 
+.filteren {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-section {
+    width: 20rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 2px solid black;
+}
+
+.filter-section p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.filter-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    flex-direction: row;
+    gap: .5em;
+    padding: .5rem;
+}
+
+.form-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-confirm {
+    justify-content: center;
+    margin-top: 1.5rem;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 30px;
+    border: 2px solid black;
+    height: 2rem;
+    width: auto;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.form-confirm:hover {
+    background-color: black;
+    color: white;
+}
+
+
 .card-container {
     justify-content: center;
     padding: 2rem;
@@ -74,6 +129,7 @@ h2 {
     gap: 4em;
     text-align: center;
 }
+
 
 
 .member-card {

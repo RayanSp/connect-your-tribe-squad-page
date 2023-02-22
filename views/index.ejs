@@ -8,16 +8,54 @@
   </nav>
 </header>
 
-
 <main>
+  <img src="/squad-b.png" class="squad-b-img" alt="Squad B groepsfoto" />
 
-<img src="/squad-b.png" class="squad-b-img" alt="Squad B groepsfoto">
+  <h2 class="card-header">SQUAD B MEMBERS</h2>
+<section class="filteren">
+  <div class="filter-section">
+    <p>Filter hier op huisdieren:</p>
 
-<h2 class="card-header">SQUAD B MEMBERS</h2>
+    <form class="filter-form">
 
-<section class="card-container">
-  <!-- Hier komen de members -->
-  <% squad.members.forEach(member => { %>
+      <div class="input-group">
+        <input type="checkbox" id="iedereen" name="iedereen" checked />
+        <label>Laat alles zien</label>
+      </div>
+
+      <div class="input-group">
+        <input type="checkbox" id="hond" name="hond">
+        <label>Hond</label>
+      </div>
+
+      <div class="input-group">
+        <input type="checkbox" id="kat" name="kat">
+        <label>Kat</label>
+      </div>  
+
+      <div class="input-group">
+        <input type="checkbox" id="cavia" name="cavia">
+        <label>Cavia</label>
+      </div> 
+
+      <div class="input-group">
+        <input type="checkbox" id="vis" name="vis">
+        <label>Vissen</label> 
+      </div>
+
+      <div class="form-btn">
+        <button type="submit" class="form-confirm">Bevestigen</button>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+
+
+  <section class="card-container">
+    <!-- Hier komen de members -->
+    <% squad.members.forEach(member => { %>
     <div class="member-card">
       <% if (member.avatar) { %>
       <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
@@ -25,12 +63,10 @@
       <img src="/placeholder.jpeg" alt="Placeholder avatar" />
       <% } %>
       <h2><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
-      <button type="button" class="info-button">Meer info!</button> 
-    </div> 
-  <% }) %>
-  
-</section>
-
+      <button type="button" class="info-button">Meer info!</button>
+    </div>
+    <% }) %>
+  </section>
 </main>
 
 <%- include('./partials/foot') %>
