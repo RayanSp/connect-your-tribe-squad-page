@@ -11,11 +11,16 @@
 <main>
   <img src="/squad-b.jpg" class="squad-b-img" alt="Squad B groepsfoto" />
 
+<!-- Sorteren op voor- of achternaam -->
+  <a href="/?squad=<%= squad.slug %>&orderBy=surname" class="order-by-surname">Achternaam</a>
+  <a href="/?squad=<%= squad.slug %>&orderBy=name" class="order-by-surname">Voornaam</a>
+
   <h2 class="card-header">SQUAD B MEMBERS</h2>
 <section class="filteren">
   <div class="filter-section">
     <p>Filter hier op huisdieren:</p>
 
+<!-- filteren op dieren -->
     <form class="filter-form">
 
       <div class="input-group">
@@ -49,12 +54,40 @@
 
     </form>
   </div>
+
+  <div class="filter-section">
+    <p>Filter hier op voor- of achternaam:</p>
+
+    <form class="filter-form">
+
+      <div class="input-group">
+        <input type="checkbox" id="voornaam" name="voornaam">
+        <label>Voornaam</label>
+      </div>
+
+      <div class="input-group">
+        <input type="checkbox" id="achternaam" name="achternaam">
+        <label>Achternaam</label>
+      </div>
+
+      <div class="form-btn">
+        <button type="submit" class="form-confirm">Bevestigen</button>
+      </div>
+
+    </form>
+  </div>
 </section>
 
 
 
   <section class="card-container">
     <!-- Hier komen de members -->
+
+    <!-- Alle members worden als eerst opgehaald door de forEach -->
+
+    <!-- Vervolgens wordt API voor de avatars opgehaald, als er geen avatar is wordt er een placeholder afbeelding geplaatst.-->
+
+    <!-- Als laatst worden alle namen geimplementeerd, voornaam, prefix en achternaam.-->
     <% squad.members.forEach(member => { %>
     <div class="member-card">
       <% if (member.avatar) { %>
