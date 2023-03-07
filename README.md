@@ -30,13 +30,16 @@ grumpy-red-coral.cyclic.app/
 
 👷🏽 Technieken 
  - EJS
+
 EJS laadt de HTML uit andere EJS-bestanden in en zet deze om in HTML, dit wordt gedaan met een simpele regel code.
 `<%- include('./partials/head') %>` en voor de footer `<%- include('./partials/footer') %>`
 
  - Node Js
+
 Met node zorg je ervoor dat Javascript aan de server-side gebruikt wordt ipv de client-side. Met HTTP requests en responses worden API's opgehaald en aangetoond op je website. 
 
  - Express
+
 Met express wordt de route van de data geregeld die wordt opgehaald. 
 
 
